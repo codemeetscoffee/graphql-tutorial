@@ -1,0 +1,30 @@
+"""acesta este un comment de documentation"""
+enum PetFoodType {
+    HERBIVORE, CARNIVORE, OMNVORE
+}
+
+interface Pet {
+    """acesta este numele petului"""
+    name: String!
+    food: PetFoodType
+    breed: String
+}
+
+type Dog implements Pet {
+    name: String!
+    food: PetFoodType
+    breed: String
+    size: String
+    coatLength: String
+}
+
+type Cat implements Pet {
+    name: String!
+    food: PetFoodType
+    breed: String
+    registry: String
+}
+
+input PetFilter {
+    petType: String
+}
